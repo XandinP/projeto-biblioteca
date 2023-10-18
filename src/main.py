@@ -5,13 +5,15 @@ from db.pessoa_repository import PessoaRepository
 from models.pessoa import Pessoa
 
 
-
 db = ConnectDb()
 db.criar_conexao()
 pessoaRepository = PessoaRepository(db)
 
+contagem_pessoas = db.pegar_contagem("pessoas")
+contagem_pessoas = db.pegar_contagem("cpf")
+print(f"PROJETAO EM TOMA\n PESSOAS: {contagem_pessoas}")
+    
 ## create
-
 
 
 value = randint(111111111, 999999999)
@@ -33,7 +35,7 @@ print(f"Listando \n {pessoaRepository.procurar_pessoa_por_cpf(value1)}")
 
 ##update
 pessoaRepository.atualizar_pessoa(value1, "Rodrigo Pinheiro dos Santos")
-print(f"Pessoa encontrada: {pessoaRepository.procurar_pessoa_por_cpf(value1)}")
+print(f"Pessoa encontrada: {pessoaRepository.procurar_pessoa_por_cpf(pessoa)}")
 
 
 ## delete

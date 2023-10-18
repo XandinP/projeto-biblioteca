@@ -5,4 +5,4 @@ class Aluno:
         self.turma = turma
         pass
     def to_string(self):
-        return f'numid = {self.num_id}, nome = {self.nome}, turma = {self.turma}'
+        return f'numid: {self.num_id}, nome: {self.nome}, turma: {self.turma}'

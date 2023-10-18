@@ -23,6 +23,10 @@ class ConnectDb:
      
     def read(self, query): ## le dados
         pass
+
+    def pegar_contagem(self, tabela):
+        self.cursor.execute(f"select count(*) from {tabela}")
+        return self.cursor.fetchone()[0]
         
     def fechar_conexao(self):
         print("fechando conexao")
