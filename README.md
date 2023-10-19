@@ -18,7 +18,11 @@ projeto para gestao de biblioteca escolar
 - Atualize os campos `user`, `password` e outros se necessario
 
 ## Rodar script the inicialiacao
-`python ./src/init_data.py`
+- Navegue ate a pasta src 
+`cd src`
+`python init_data.py`
 
 ## Iniciar aplicacao
-`python ./src/main.py`
+- Navegue ate a pasta src 
+`cd src`
+`python .main.py`
