@@ -50,7 +50,7 @@ class Relatorios:
         query = """
             select * from aluno
         """
-
+        print("RELATORIO DE ALUNOS")
         alunos = self.db.readAll(query)
         self.menu.showAsTable(alunos)
         pass
@@ -59,6 +59,7 @@ class Relatorios:
         query = """
             select * from livro
         """
+        print ("RELATORIO DE LIVROS")
         livros = self.db.readAll(query)
         self.menu.showAsTable(livros)
         pass
@@ -68,7 +69,7 @@ class Relatorios:
         query = """
             select categoria, count(*) as num_livros from livro group by categoria
         """
-        
+        print("RELATORIO DE LIVROS POR CATEGORIA ")
         livros = self.db.readAll(query)
         self.menu.showAsTable(livros)
         
@@ -80,6 +81,6 @@ class Relatorios:
             join aluno a on e.id_aluno = a.id
             join livro l on e.isbn = l.isbn
         """
-
+        print("RELATORIO DE EMPRESTIMOS")
         emprestimos = self.db.readAll(query)
         self.menu.showAsTable(emprestimos)
