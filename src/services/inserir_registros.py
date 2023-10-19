@@ -50,10 +50,11 @@ class InserirRegistros:
                 values (ID_ALUNO_SEQ.nextval, '{aluno.nome}', '{aluno.turma}')
             """
             self.db.insert(query)
-            
+            print("\033c", end="")
             inserirOutro = Confirm.ask("Deseja inserir mais algum aluno?")
             
             if not inserirOutro:
+                print("\033c", end="")
                 break
             
     def insertLivro(self):
@@ -72,10 +73,11 @@ class InserirRegistros:
                 values ('{livro.isbn}', '{livro.titulo}', '{livro.autor}', {livro.ano}, '{livro.categoria}', {livro.copiasDisponiveis})
             """
             self.db.insert(query)
-            
+            print("\033c", end="")
             inserirOutro = Confirm.ask("Deseja inserir mais algum livro?")
             
             if not inserirOutro:
+                print("\033c", end="")
                 break
     
     def insertEmprestimo(self):
@@ -92,9 +94,11 @@ class InserirRegistros:
                     
                     self.db.insert(query)
                     self.db.update(f"update livro set copias_disponiveis = copias_disponiveis - 1 where isbn = '{isbn}' ")
+                    print("\033c", end="")
                     inserirOutro = Confirm.ask("Deseja inserir mais algum emprestimo?")
                     
                     if not inserirOutro:
+                        print("\033c", end="")
                         break
                 else:
                     escolherOutro = Confirm.ask("O aluno escolhido nao existe, deseja escolher outro?")
@@ -103,10 +107,9 @@ class InserirRegistros:
             else:
                 escolherOutro = Confirm.ask("O livro escolhido nao possui copias ou nao existe no momento, deseja escolher outro?")
                 if not escolherOutro:
+                    print("\033c", end="")
                     break
-                else:
-                    print("Voltando ao menu.") 
-        
+
     def validaLivro(self, isbn: str):
         copiasDisponiveis = self.db.readOne(f"select copias_disponiveis from livro where isbn = '{isbn}'")
         
