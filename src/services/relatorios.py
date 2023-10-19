@@ -30,12 +30,16 @@ class Relatorios:
             opt = int(Prompt.ask("Selecione uma opcao"))
 
             if opt == 1:
+                print("\033c", end="")
                 self.relatorioLivrosPorCategoria()
             elif opt == 2:
+                print("\033c", end="")
                 self.relatorioEmprestimos()
             elif opt == 3:
+                print("\033c", end="")
                 self.relatorioAlunos()
             elif opt == 4:
+                print("\033c", end="")
                 self.relatorioLivros()
             elif opt == 5:
                 break

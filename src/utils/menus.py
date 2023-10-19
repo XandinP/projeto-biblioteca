@@ -22,7 +22,7 @@ Alunos: [bold yellow]{countAlunos}[/bold yellow]
 Livros: [bold yellow]{countLivros}[/bold yellow]
 Emprestimos: [bold yellow]{countEmprestimos}[/bold yellow]
 
-Criado por: [italic]Alexandre de Paula[/italic]
+Criado por: [italic]Alexandre de Paula Costa[/italic]
 Disciplina: Banco de Dados 2023/2
 Professor: Howard Roatti
 """
@@ -44,17 +44,19 @@ Professor: Howard Roatti
         
         opcao = Prompt.ask("Escolha uma opcao")
         return int(opcao)
+    
 
     def confirmar(self):
         return Prompt.ask("Pressione [bold yellow]ENTER[/bold yellow] para continuar")
     
+    
     def showAsTable(self, rows):
-        if not isinstance(rows, (list)): ## usado nos casos de 1 resultado que nao e uma lista
-            rows = [rows] ## transforma em lista pra printar table
+        if not isinstance(rows, (list)):
+            rows = [rows] 
             
         if rows:
-            colunas = [desc[0] for desc in self.db.cursor.description]  # pega o nomes das colunas do resultado
-            tabela_formatada = tabulate(rows, headers=colunas, tablefmt="heavy_grid") ## formata em table
+            colunas = [desc[0] for desc in self.db.cursor.description]  
+            tabela_formatada = tabulate(rows, headers=colunas, tablefmt="heavy_grid") 
             print(tabela_formatada)
         else:
             print("Nenhum resultado encontrado.")

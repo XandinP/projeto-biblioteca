@@ -47,7 +47,7 @@ class RemoverRegistros:
                 self.db.delete(f"delete from emprestimo where idemprestimo = {id}")
             confirmacao = Confirm.ask("deseja deletar outro emprestimo ?")
             if not confirmacao:
-                print("Voltando ao menu principal")
+                print("\033c", end="")
                 break
                         
     def deleteLivro(self):
@@ -67,7 +67,7 @@ class RemoverRegistros:
                     self.db.delete(f"delete from livro where isbn = '{isbn}'")
             confirmacao = Confirm.ask("deseja deletar outro livro ?")
             if not confirmacao:
-                print("Voltando ao menu principal")
+                print("\033c", end="")
                 break
                     
             
@@ -89,7 +89,7 @@ class RemoverRegistros:
                     self.db.delete(f"delete from aluno where id = {idAluno}")
             confirmacao = Confirm.ask("deseja deletar outro aluno ?")
             if not confirmacao:
-                print("Voltando ao menu principal")
+                print("\033c", end="")
                 break
             
         

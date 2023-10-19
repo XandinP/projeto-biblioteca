@@ -72,9 +72,11 @@ class AtualizarRegistros:
                 atualizarOutro = Confirm.ask("Deseja devolver mais algum emprestimo?")
                 
                 if not atualizarOutro:
+                    print("\033c", end="")
                     break
                 
             else:
+                print("\033c", end="")
                 print("Emprestimo nao encontrado")
         pass
 
@@ -114,9 +116,11 @@ class AtualizarRegistros:
                 atualizarOutro = Confirm.ask("Deseja atualizar mais algum livro?")
                 
                 if not atualizarOutro:
+                    print("\033c", end="")
                     break
                 
             else:
+                print("\033c", end="")
                 print("Livro nao encontrado")
             
             
@@ -156,8 +160,10 @@ class AtualizarRegistros:
                 atualizarOutro = Confirm.ask("Deseja atualizar mais algum aluno?")
                 
                 if not atualizarOutro:
+                    print("\033c", end="")
                     break
                 
             else:
+                print("\033c", end="")
                 print("Aluno nao encontrado")
         pass
