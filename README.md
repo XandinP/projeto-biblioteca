@@ -10,6 +10,8 @@ projeto para gestao de biblioteca escolar
 `pip install tabulate`
 `pip install cx_Oracle`
 
+- Para rodar em linux e necessario ter o InstantClient
+- Siga as intruções nesse [link](https://csiandal.medium.com/install-oracle-instant-client-on-ubuntu-4ffc8fdfda08)
 
 ## Atualizar as credenciais do banco
 - Va para ./src/db/database_manager.py
