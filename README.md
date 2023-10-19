@@ -1,5 +1,5 @@
 # projeto-biblioteca
-projeto para gestao de biblioteca
+projeto para gestao de biblioteca escolar
 
 
 # Como rodar o projeto
