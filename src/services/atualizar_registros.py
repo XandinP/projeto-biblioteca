@@ -37,12 +37,10 @@ class AtualizarRegistros:
             
             if opt == 1:
                 self.devolverLivro()
-                break
             elif opt == 2:
                 self.updateLivro()
             elif opt == 3:
                 self.updateAluno()
-                break
             elif opt == 4:
                 break
             else:
@@ -70,7 +68,7 @@ class AtualizarRegistros:
                 query = f"update livro set copias_disponiveis = copias_disponiveis + 1 where isbn = {emprestimoSelecionado.isbn}"
                 self.db.update(query)
                 atualizarOutro = Confirm.ask("Deseja devolver mais algum emprestimo?")
-                
+                print("\033c", end="")
                 if not atualizarOutro:
                     print("\033c", end="")
                     break
@@ -114,7 +112,7 @@ class AtualizarRegistros:
                 print("Livro atualizado:")
                 self.menu.showAsTable(livro)
                 atualizarOutro = Confirm.ask("Deseja atualizar mais algum livro?")
-                
+                print("\033c", end="")
                 if not atualizarOutro:
                     print("\033c", end="")
                     break
@@ -158,7 +156,7 @@ class AtualizarRegistros:
                 self.menu.showAsTable(aluno)
                 
                 atualizarOutro = Confirm.ask("Deseja atualizar mais algum aluno?")
-                
+                print("\033c", end="")
                 if not atualizarOutro:
                     print("\033c", end="")
                     break
