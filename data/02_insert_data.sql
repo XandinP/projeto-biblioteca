@@ -3,10 +3,10 @@ INSERT INTO LIVRO (ISBN, TITULO, AUTOR, ANO, CATEGORIA, COPIAS_DISPONIVEIS)
 VALUES ('9788535902775', 'Dom Casmurro', 'Machado de Assis', 1899, 'Romance', 10);
 
 INSERT INTO LIVRO (ISBN, TITULO, AUTOR, ANO, CATEGORIA, COPIAS_DISPONIVEIS)
-VALUES ('9788571649300', 'Memórias Póstumas de Brás Cubas', 'Machado de Assis', 1881, 'Romance', 8);
+VALUES ('9788571649300', 'Memorias Postumas de Bras Cubas', 'Machado de Assis', 1881, 'Romance', 8);
 
 INSERT INTO LIVRO (ISBN, TITULO, AUTOR, ANO, CATEGORIA, COPIAS_DISPONIVEIS)
-VALUES ('9788503006481', 'Capitães da Areia', 'Jorge Amado', 1937, 'Romance', 12);
+VALUES ('9788503006481', 'Capitaes da Areia', 'Jorge Amado', 1937, 'Romance', 12);
 
 INSERT INTO LIVRO (ISBN, TITULO, AUTOR, ANO, CATEGORIA, COPIAS_DISPONIVEIS)
 VALUES ('9788525046840', 'A Hora da Estrela', 'Clarice Lispector', 1977, 'Ficcao', 5);
@@ -28,7 +28,7 @@ INSERT INTO ALUNO (ID, TURMA, NOME)
 VALUES (ID_ALUNO_SEQ.nextval, 'C303', 'Ana Pereira');
 
 INSERT INTO ALUNO (ID, TURMA, NOME)
-VALUES (ID_ALUNO_SEQ.nextval, 'B202', 'José Santos');
+VALUES (ID_ALUNO_SEQ.nextval, 'B202', 'Jose Santos');
 
 -- Inserir dados na tabela EMPRESTIMO
 INSERT INTO EMPRESTIMO (IDEMPRESTIMO, DATAEMPRESTIMO, DATADEVOLUCAO, ISBN, ID_ALUNO)

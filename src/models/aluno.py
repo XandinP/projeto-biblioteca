@@ -4,3 +4,6 @@ class Aluno:
         self.nome = nome
         self.turma = turma
         pass
+
+    def __str__(self):
+        return f"Aluno(id={self.id}, turma='{self.turma}', nome='{self.nome}')"

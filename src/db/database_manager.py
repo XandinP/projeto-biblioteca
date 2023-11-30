@@ -21,7 +21,7 @@ class DatabaseManager:
         pass
 
     def insert(self, query: str):
-        self.execute(query)
+        self.execute(query) # perai, pegando com o gpt como q eu mapeio pra model
         pass
 
     def readAll(self, query: str):

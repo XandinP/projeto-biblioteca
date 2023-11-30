@@ -8,6 +8,37 @@ class Menus:
     def __init__(self, db):
         self.db = db
         pass
+
+    def chooseDbMenu(self):
+        os.system("cls" if os.name == "nt" else "clear")
+        print(
+            f"""
+[bold cyan] Escolha o tipo de banco de dados[/bold cyan]
+[bold yellow]1.[/bold yellow] Relacional - Oracle
+[bold yellow]2.[/bold yellow] Nao relacional - Mongo
+[bold yellow]3.[/bold yellow] Sincronizar dados do oracle com o mongo
+[bold yellow]4.[/bold yellow] Sair
+"""
+        )
+
+        opcao = Prompt.ask("Escolha uma opcao")
+        return int(opcao)
+    
+    def mongoMenu(self):
+        os.system("cls" if os.name == "nt" else "clear")
+        print(
+            f"""
+[bold yellow]1.[/bold yellow] Listar alunos
+[bold yellow]2.[/bold yellow] Listar livros
+[bold yellow]3.[/bold yellow] Listar emprestimos
+[bold yellow]4.[/bold yellow] Sair
+"""
+        )
+
+        opcao = Prompt.ask("Escolha uma opcao")
+        return int(opcao)
+    
+
     def displayInitMenu(self):
         countAlunos = self.db.getCount("aluno")
         countEmprestimos = self.db.getCount("emprestimo")
