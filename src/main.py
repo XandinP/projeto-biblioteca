@@ -19,11 +19,11 @@ menus = Menus(oracle_db)
 
 
 while True: 
+    menus.displayInitMenu()
     opt = menus.chooseDbMenu()
 
     # oracle
     if opt == 1:
-        menus.displayInitMenu()
 
         while True:
             os.system("cls" if os.name == "nt" else "clear")

@@ -41,7 +41,7 @@ class Menus:
 
     def displayInitMenu(self):
         countAlunos = self.db.getCount("aluno")
-        countEmprestimos = self.db.getCount("emprestimo")
+        countEmprestimos = self.db.getCount("emprestimo") 
         countLivros = self.db.getCount("livro")
 
         os.system("cls" if os.name == "nt" else "clear")
