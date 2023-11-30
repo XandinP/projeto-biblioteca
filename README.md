@@ -19,7 +19,7 @@ projeto para gestao de biblioteca escolar
 - Va para ./src/db/database_manager.py
 - Atualize os campos `user`, `password` e outros se necessario
 
-## Rodar script the inicialiacao
+## Rodar script de inicialiacao
 - Navegue ate a pasta src 
 `cd src`
 `python init_data.py`
@@ -28,3 +28,7 @@ projeto para gestao de biblioteca escolar
 - Navegue ate a pasta src 
 `cd src`
 `python .main.py`
+
+## foi adicionado
+`sync.py`
+- Script de sincronização do Oracle com Mongo
